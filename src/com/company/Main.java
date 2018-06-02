@@ -61,17 +61,16 @@ public class Main {
         professor.setGroups(allGroups);
 
         //roll-call of students in a group
-        professor.setPresenceStudent(group1.getClassLead(), true);
-        professor.setPresenceStudent(st1, true);
-        professor.setPresenceStudent(st2, true);
-        professor.setPresenceStudent(st3, true);
-        professor.setPresenceStudent(st4, true);
-        professor.setPresenceStudent(st5, false);
-        professor.setPresenceStudent(st6, true);
-        professor.setPresenceStudent(st7, true);
-        professor.setPresenceStudent(st8, false);
-        professor.setPresenceStudent(st9, true);
-        professor.setPresenceStudent(st10, false);
+        professor.setPresenceStudent(group1.getList().get(0), true);
+        professor.setPresenceStudent(group1.getList().get(1), true);
+        professor.setPresenceStudent(group1.getList().get(2), true);
+        professor.setPresenceStudent(group1.getList().get(3), true);
+        professor.setPresenceStudent(group1.getList().get(4), false);
+        professor.setPresenceStudent(group1.getList().get(5), true);
+        professor.setPresenceStudent(group1.getList().get(6), true);
+        professor.setPresenceStudent(group1.getList().get(7), false);
+        professor.setPresenceStudent(group1.getList().get(8), true);
+        professor.setPresenceStudent(group1.getList().get(9), false);
 
         //list of those present
         professor.printPresenceStudents(group1);
