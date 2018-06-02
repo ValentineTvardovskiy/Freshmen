@@ -2,6 +2,7 @@ package com.company;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class Main {
 
@@ -61,16 +62,10 @@ public class Main {
         professor.setGroups(allGroups);
 
         //roll-call of students in a group
-        professor.setPresenceStudent(group1.getList().get(0), true);
-        professor.setPresenceStudent(group1.getList().get(1), true);
-        professor.setPresenceStudent(group1.getList().get(2), true);
-        professor.setPresenceStudent(group1.getList().get(3), true);
-        professor.setPresenceStudent(group1.getList().get(4), false);
-        professor.setPresenceStudent(group1.getList().get(5), true);
-        professor.setPresenceStudent(group1.getList().get(6), true);
-        professor.setPresenceStudent(group1.getList().get(7), false);
-        professor.setPresenceStudent(group1.getList().get(8), true);
-        professor.setPresenceStudent(group1.getList().get(9), false);
+        Random random = new Random();
+        for (int i = 0; i < group1.getList().size(); i++) {
+            professor.setPresenceStudent(group1.getList().get(i), random.nextBoolean());
+        }
 
         //list of those present
         professor.printPresenceStudents(group1);
