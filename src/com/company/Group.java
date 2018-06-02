@@ -44,6 +44,7 @@ public class Group {
     }
 
     public ClassLead getClassLead(){
+        System.out.println("Who is classlead of the group?"); //Who is that Pokemoooon? =)
         for(Student st : list)
             if(st.getClass() == ClassLead.class)
                 return (ClassLead)st;

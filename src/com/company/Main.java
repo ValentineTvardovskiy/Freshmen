@@ -48,7 +48,6 @@ public class Main {
         //group1.print();
 
         //classlead of the group
-        System.out.println("Who is classlead of the group?"); //Who is that Pokemoooon? =)
         group1.setClassLead();
         System.out.println(group1.getClassLead());
         System.out.println();
